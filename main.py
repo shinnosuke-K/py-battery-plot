@@ -20,8 +20,8 @@ def draw_bat(bat, x):
 
 def draw_bats(*args, x=None):
     n = 0
-    color = ["blue", "green", "red", "black"]
-
+    color = ["blue", "green", "red"]
+    label = ["current", "max", "design"]
     plt.grid(True)
     for y in args:
         plt.plot(x, y, color=color[n], label=label[n])
