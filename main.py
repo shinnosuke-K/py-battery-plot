@@ -35,7 +35,7 @@ def draw_rate(rate, x):
     plt.grid(True)
     plt.xlabel("n")
     plt.ylabel("%")
-    plt.plot(x, rate_bat, color="black", label="rate")
+    plt.plot(x, rate, color="black", label="rate")
     plt.show()
 
 
