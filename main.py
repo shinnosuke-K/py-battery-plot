@@ -31,9 +31,18 @@ def draw_bats(*args, x=None):
     plt.show()
 
 
+def draw_rate(rate, x):
+    plt.grid(True)
+    plt.xlabel("n")
+    plt.ylabel("%")
+    plt.plot(x, rate_bat, color="black", label="rate")
+    plt.show()
+
+
 if __name__ == '__main__':
     current_bat = read_bat(0)
     max_bat = read_bat(1)
     design_bat = read_bat(2)
     rate_bat = read_bat(3)
     draw_bats(current_bat, max_bat, design_bat, x=[n + 1 for n in range(len(current_bat))])
+    draw_rate(rate_bat, [n + 1 for n in range(len(rate_bat))])
