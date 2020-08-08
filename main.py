@@ -24,8 +24,7 @@ def draw_bats(*args, x=None):
 
     plt.grid(True)
     for y in args:
-        print(y)
-        plt.plot(x, y, color=color[n])
+        plt.plot(x, y, color=color[n], label=label[n])
         n += 1
 
     plt.legend(loc=0)
