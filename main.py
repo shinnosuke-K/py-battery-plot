@@ -7,7 +7,10 @@ def read_bat(n):
     with open("bat.csv") as f:
         reader = csv.reader(f)
         for row in reader:
-            bat_info.append(row[n])
+            bat_info.append(float(row[n]))
+
+    column_x = [n+1 for n in range(len(bat_info))]
+    return bat_info, column_x
 
     return bat_info
 
