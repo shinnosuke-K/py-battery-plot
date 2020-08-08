@@ -18,6 +18,20 @@ def draw_bat(bat, x):
     plt.show()
 
 
+def draw_bats(*args, x=None):
+    n = 0
+    color = ["blue", "green", "red", "black"]
+
+    plt.grid(True)
+    for y in args:
+        print(y)
+        plt.plot(x, y, color=color[n])
+        n += 1
+
+    plt.legend(loc=0)
+    plt.show()
+
+
 if __name__ == '__main__':
     current_bat = read_bat(0)
     max_bat = read_bat(1)
