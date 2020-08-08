@@ -1,4 +1,3 @@
-
 import matplotlib.pyplot as plt
 import csv
 
@@ -10,8 +9,7 @@ def read_bat(n):
         for row in reader:
             bat_info.append(float(row[n]))
 
-    column_x = [n+1 for n in range(len(bat_info))]
-    return bat_info, column_x
+    return bat_info
 
 
 def draw_bat(bat, x):
@@ -21,5 +19,8 @@ def draw_bat(bat, x):
 
 
 if __name__ == '__main__':
-    current_bat, x = read_bat(3)
-    draw_bat(current_bat, x)
+    current_bat = read_bat(0)
+    max_bat = read_bat(1)
+    design_bat = read_bat(2)
+    rate_bat = read_bat(3)
+    draw_bats(current_bat, max_bat, design_bat, x=[n + 1 for n in range(len(current_bat))])
